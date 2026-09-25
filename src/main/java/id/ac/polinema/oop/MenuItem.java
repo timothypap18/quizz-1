@@ -20,15 +20,16 @@ public class MenuItem {
      * @param price price in Rupiah
      */
     public MenuItem(String name, double price) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        setName(name);
+        this.price = price;
     }
 
     public String getName() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.name;
     }
 
     public double getPrice() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.price;
     }
 
     /**
@@ -38,6 +39,8 @@ public class MenuItem {
      * @param price new price in Rupiah
      */
     public void setPrice(double price) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (price < 0) {
+            System.out.println("The Price is not valid!");
+        }
     }
 }

@@ -19,15 +19,16 @@ public class Customer {
      * @param name       customer's name
      */
     public Customer(String customerId, String name) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        setCustomerId(customerId);
+        this.name = name;
     }
 
     public String getCustomerId() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.customerId;
     }
 
     public String getName() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.name;
     }
 
     /**
@@ -37,6 +38,10 @@ public class Customer {
      * @param name new name
      */
     public void setName(String name) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if(name != null && !name.trim().isEmpty()) {
+            this.name = name;
+        } else {
+            System.err.println("Nama Tidak boleh kosong");
+        }
     }
 }
